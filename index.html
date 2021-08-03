@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aujasen</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
+
+    <!-- 重置样式 -->
+    <link rel="stylesheet/less" href="./assets/css/reset.less" />
+
+    <!-- 公共样式 -->
+    <link rel="stylesheet/less" href="assets/css/common.less" />
+
+    <!-- 页面单独的样式 -->
+    <link rel="stylesheet/less" href="./assets/css/index.less" />
+
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- logo -->
+                <div class="navbar-header wow bounceInLeft" data-wow-delay="600ms">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:void(0)">Aujasen</a>
+                </div>
+
+                <!-- 导航栏 -->
+                <div class="collapse navbar-collapse wow bounceInRight" data-wow-delay="600ms" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="./index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">ABOUTUS</a>
+                        </li>
+                        <li>
+                            <a href="./products.html">PRODUCTS</a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html">CONTACTS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- banner -->
+    <div class="banner">
+        
+        <!-- 轮播 -->
+        <div class="backbanner">
+
+            <!-- 图片 -->
+            <input type="radio" name="banner" id="banner1" checked />
+            <div class="back">
+                <img src="./assets/images/home_banner.png" />
+            </div>
+
+            <input type="radio" name="banner" id="banner2"/>
+            <div class="back">
+                <img src="./assets/images/home_banner2.jpg" alt="第二张" />
+            </div>
+
+            <input type="radio" name="banner" id="banner3" />
+            <div class="back">
+                <img src="./assets/images/home_banner3.jpg" />
+            </div>
+
+            <!-- 小图标 -->
+            <div class="morebox">
+                <div class="more wow fadeInUp" data-wow-delay="500ms">
+                    <label for="banner1"></label>
+                    <label for="banner2"></label>
+                    <label for="banner3"></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 文字 -->
+        <div class="content wow fadeInUp" data-wow-delay="400ms">
+            <h2 class="title">
+                <span>Aujasen</span>
+                <span>Diving equipment</span>
+            </h2>
+
+            <p class="info">
+                We specialize in designing and producing scuba diving equipment.
+                Our products including: BCD, 1st & 2nd stage regulator, wetsuit,
+                lycra surfing suit, diving mask,
+                led diving flashlight and other relative diving accessories.
+            </p>
+        </div>
+    </div>
+
+    <!-- about -->
+    <div class="about" id="aboutus">
+        <!-- 背景图 -->
+        <div class="about_back">
+            <img src="./assets/images/home_about.png" />
+        </div>
+
+        <!-- 介绍 -->
+        <div class="subject">
+            <div class="title wow fadeInUp" data-wow-delay="500ms">
+                About Us
+            </div>
+            <div class="info wow fadeInUp" data-wow-delay="600ms">
+                Aujasen Diving Equipment Mfy Co., Ltd is an experienced manufactory of scuba diving equipment that located in Zhanjiang City, Guangdong Province, China.As a qualify supplier in diving equipment manufacturing for more than 30 years, we has provided outstanding diving products to scores of countries around the world. 
+            </div>
+        </div>
+    </div>
+
+    <!-- products -->
+    <div class="products" id="products">
+        <div class="container">
+            <!-- 标题 -->
+            <div class="subject">
+                <div class="title wow fadeInUp" data-wow-delay="500ms">
+                    Latest products
+                </div>
+            </div>
+
+            <!-- 产品列表 -->
+            <div class="item">
+                <div class="list wow flipInX" data-wow-delay="600ms">
+                    <div class="thumb wow fadeInUp" data-wow-delay="600ms">
+                        <img src="./assets/images/products_01.png" />
+                    </div>
+                    <div class="info">BCD suitable for adults and kids</div>
+                </div>
+                <div class="list wow flipInX" data-wow-delay="600ms">
+                    <div class="thumb wow fadeInUp" data-wow-delay="600ms">
+                        <img src="./assets/images/products_02.png" />
+                    </div>
+                    <div class="info">Second stage regulator</div>
+                </div>
+                <div class="list wow flipInX" data-wow-delay="600ms">
+                    <div class="thumb wow fadeInUp" data-wow-delay="600ms">
+                        <img src="./assets/images/products_03.png" />
+                    </div>
+                    <div class="info">Scuba diving</div>
+                </div>
+                <div class="list wow flipInX" data-wow-delay="600ms">
+                    <div class="thumb wow fadeInUp" data-wow-delay="600ms">
+                        <img src="./assets/images/products_04.png" />
+                    </div>
+                    <div class="info">Backpack</div>
+                </div>
+                <div class="list wow flipInX" data-wow-delay="600ms">
+                    <div class="thumb wow fadeInUp" data-wow-delay="600ms">
+                        <img src="./assets/images/products_05.png" />
+                    </div>
+                    <div class="info">Diving LED flashlight</div>
+                </div>
+                <div class="list wow flipInX" data-wow-delay="600ms">
+                    <div class="thumb wow fadeInUp" data-wow-delay="600ms">
+                        <img src="./assets/images/products_06.png" />
+                    </div>
+                    <div class="info">Diving pressure gauge</div>
+                </div>
+            </div>
+
+            <!-- button -->
+            <div class="bottom wow fadeInUp" data-wow-delay="700ms">
+                <button class="more bg-info">MORE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- buy now -->
+    <div class="buy_now" id="buy">
+        <div class="buy_bg">
+            <img src="./assets/images/buy_bg.png" />
+        </div>
+        <div class="title wow fadeInUp" data-wow-delay="500ms">
+            <p>Buy now and get a Discount</p>
+            <span>Go to aujasen mall</span>
+            <img src="./assets/images/buy_jt.png" />
+        </div>
+    </div>
+
+    <!-- brand -->
+    <div class="brand">
+        <div class="container">
+
+            <div class="list">
+                <div class="item">
+                    <div class="thumn">
+                        <img src="./assets/images/brand_01.png" class="wow fadeInUp" data-wow-delay="500ms" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="thumn">
+                        <img src="./assets/images/brand_02.png" class="wow fadeInUp" data-wow-delay="600ms" /> 
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="thumn">
+                        <img src="./assets/images/brand_03.png" class="wow fadeInUp" data-wow-delay="700ms" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="thumn">
+                        <img src="./assets/images/brand_04.png" class="wow fadeInUp" data-wow-delay="800ms" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="thumn">
+                        <img src="./assets/images/brand_05.png" class="wow fadeInUp" data-wow-delay="900ms" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="thumn">
+                        <img src="./assets/images/brand_06.png" class="wow fadeInUp" data-wow-delay="1000ms" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div class="contact" id="contacts">
+        <div class="container">
+            <div class="left wow fadeInUp" data-wow-delay="600ms">
+                Sign up to Our Newsletter & Get
+                    <span>
+                        5% off 
+                    </span>
+                on Voucher
+            </div>
+            <div class="right wow fadeInUp" data-wow-delay="600ms">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter your email address" >
+                    <button class="btn" type="button" >Sign UP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <!-- 上半部分 -->
+            <div class="top wow fadeInUp" data-wow-delay="500ms">
+                <!-- 左边导航栏 -->
+                <div class="left" data-wow-delay="2s">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="./index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">ABOUTUS</a>
+                        </li>
+                        <li>
+                            <a href="./products.html">PRODUCTS</a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html">CONTACTS</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 右边搜索图标 -->
+                <div class="right">
+                    <a class="glyphicon glyphicon-search" data-wow-delay="2s"  aria-hidden="true"></a>
+                </div>
+            </div>
+
+            <!-- 下半部分 -->
+            <div class="bottom wow fadeInUp" data-wow-delay="500ms">
+                <!-- 左边 -->
+                <div class="left wow fadeInUp" data-wow-delay="500ms">
+                    <span>Specializing in the production of diving equipment</span>
+                </div>
+                
+                <!-- 右边防伪 -->
+                <div class="right wow fadeInUp" data-wow-delay="500ms">
+                    <span>&copy; 2017 Aujasen Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+<!-- 解析less的文件 -->
+<script src="./assets/js/less.min.js"></script>
+
+<!-- jquery  -->
+<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+
+<!-- bootstrap -->
+<script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+
+<!-- wow.js -->
+<script src="./assets/js/wow.min.repeat.js"></script>
+
+<script>
+    new WOW().init();
+</script>

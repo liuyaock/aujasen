@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
+
+    <!-- 重置样式 -->
+    <link rel="stylesheet/less" href="./assets/css/reset.less" />
+
+    <!-- 公共样式 -->
+    <link rel="stylesheet/less" href="assets/css/common.less" />
+
+    <!-- 页面单独的样式 -->
+    <link rel="stylesheet/less" href="./assets/css/contacts.less" />
+
+    <!-- 百度地图 -->
+    <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=BLiVZcoPIWGDIemPgSltpz92E9rae4Wa"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- logo -->
+                <div class="navbar-header wow bounceInLeft" data-wow-delay="600ms">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Aujasen</a>
+                </div>
+
+                <!-- 导航栏 -->
+                <div class="collapse navbar-collapse wow bounceInRight" data-wow-delay="600ms" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="./index.html" target="_black">HOME</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" target="_black">ABOUTUS</a>
+                        </li>
+                        <li>
+                            <a href="./products.html" target="_black">PRODUCTS</a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html" target="_black">CONTACTS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="back">
+            <img src="./assets/images/contacts_bg.png" />
+        </div>
+    </div>
+
+    <!-- map -->
+    <div class="map">
+        <div id="allmap"></div>
+
+        <!-- Contacts -->
+        <div class="contacts_info">
+            <div class="container">
+                <div class="title">
+                    <h2>Contacts info</h2>
+                    <span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa illo inventore veritatis et quasi architecto beatae.</span>
+                </div>
+                
+                <div class="info">
+                    <p class="name">John Xie</p>
+
+                    <p class="mobile">
+                        Mobile
+                        <span>189-0081-5900</span>
+                    </p>
+
+                    <p class="tel">
+                        Tel
+                        <span>0759-7772920</span>
+                    </p>
+
+                    <p class="Fax">
+                        Tel
+                        <span>0759-7772920</span>
+                    </p>
+
+                    <p class="email">
+                        E-mail
+                        <span>johnxie@gmail.com</span>
+                    </p>
+
+                    <p class="address">
+                        Address
+                        <span>No.60, Tianqiao Road Suicheng, Suixi County, Zhanjiang City, Guangdong Province, China</span>
+                    </p>
+
+                </div>
+
+                <div class="code">
+                    <img src="./assets/images/contacts_code.png" />
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <!-- 上半部分 -->
+            <div class="top wow fadeInUp" data-wow-delay="500ms">
+                <!-- 左边导航栏 -->
+                <div class="left" data-wow-delay="2s">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="./index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">ABOUTUS</a>
+                        </li>
+                        <li>
+                            <a href="./products.html">PRODUCTS</a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html">CONTACTS</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 右边搜索图标 -->
+                <div class="right">
+                    <a class="glyphicon glyphicon-search" data-wow-delay="2s"  aria-hidden="true"></a>
+                </div>
+            </div>
+
+            <!-- 下半部分 -->
+            <div class="bottom wow fadeInUp" data-wow-delay="500ms">
+                <!-- 左边 -->
+                <div class="left wow fadeInUp" data-wow-delay="500ms">
+                    <span>Specializing in the production of diving equipment</span>
+                </div>
+                
+                <!-- 右边防伪 -->
+                <div class="right wow fadeInUp" data-wow-delay="500ms">
+                    <span>&copy; 2017 Aujasen Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<!-- 解析less的文件 -->
+<script src="./assets/js/less.min.js"></script>
+
+<!-- jquery  -->
+<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+
+<!-- bootstrap -->
+<script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+
+<!-- wow.js -->
+<script src="./assets/js/wow.min.repeat.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+
+<script>
+    var map = new BMapGL.Map('allmap'); // 创建Map实例
+    map.centerAndZoom(new BMapGL.Point(116.404, 39.915), 12); // 初始化地图,设置中心点坐标和地图级别
+    map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+</script>

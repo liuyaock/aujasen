@@ -1,0 +1,141 @@
+/* 头部 */ 
+.header{
+    background-color: transparent;
+    position: sticky;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100000;
+
+    transition:all linear .4s;
+    
+    .navbar{
+        border:0px;
+        border-radius: 0px;
+        margin: 0;
+
+        .navbar-brand{
+            color:#fff;
+            font-family: ParReg;
+        }
+
+        .nav{
+            a{
+                color:#fff;
+                text-transform: uppercase;
+                border-bottom:4px solid transparent;
+                transition:all linear .3s;
+
+                &:hover{
+                    border-bottom:4px solid #0066cc;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px){
+        &{
+            background-color:#111111;
+            .navbar{
+                .nav{
+                    a{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+/* footer */
+.footer{
+    background-color: #000;
+    height: 25em;
+
+    .top{
+        width: 100%;
+        display: flex;
+        padding-right: 2em;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid #333333;
+
+        .left{
+            width: 50%;
+            text-transform: uppercase;
+
+            a{
+                color: #fff;
+
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+
+        .right{
+            width: 50%;
+
+            .glyphicon-search{
+                float: right;
+                color: #fff;
+                text-align: right;
+                cursor: pointer;
+
+                &:hover{
+                    color: #0066cc;
+                }
+            }
+        }
+    }
+
+    .bottom{
+        height: 2em;
+        padding: 2em 2em;
+        color: #666666;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left{
+            width: 50%;
+        }
+
+        .right{
+            float: right;
+            width: 50%;
+            text-align: right;
+        }
+    }
+
+    @media screen and (max-width:1000px) {
+        &{
+           .top{
+               .left{
+                   width: 70%;
+               }
+           }
+        }
+    }
+
+    @media screen and (max-width:720px) {
+        &{
+            .bottom{
+                flex-wrap: wrap;
+                justify-content: space-around;
+                text-align: center;
+
+                .left{
+                    width: 100%;
+                }
+
+                .right{
+                    width: 100%;
+                    text-align: center;
+                    padding: 2em 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,767 @@
+/* banner */
+.banner{
+    .backbanner{
+        position: relative;
+        height: 50em;
+        margin: 0 auto;
+
+        input{
+            display: none;
+        }
+
+        input:checked + .back{
+            opacity: 1;
+            z-index:1;
+
+        }
+
+        #banner1:checked ~ .morebox label[for="banner1"],
+        #banner2:checked ~ .morebox label[for="banner2"],
+        #banner3:checked ~ .morebox label[for="banner3"]{
+            background-color:#0066cc;
+        }
+
+        .back{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            margin: 0 auto;
+            margin-bottom:4em;
+            transition: all linear .3s;
+
+            img{
+                width: 100%;
+                
+            }
+            
+
+        }
+
+        .morebox{
+            position: absolute;
+            width:100%;
+            bottom:0;
+            left:0;
+            z-index: 100;
+
+            .more{
+                display: flex;
+                width:15%;
+                justify-content: space-around;
+                margin:0 auto;
+        
+                label{
+                    display: inline-block;
+                    width:2em;
+                    height:.8em;
+                    background-color:#fff;
+                    cursor: pointer;
+                    transition:all linear .3s;
+                }
+        
+                label:hover{
+                    background-color:#0066cc;
+                }
+            }
+        }
+    }
+
+    .content{
+        width: 45%;
+        position: absolute;
+        top: 40%;
+        left: 28%;
+        color: #fff;
+        text-align: center;
+        z-index: 1000;
+        margin: 0 auto;
+
+        .title{
+            font-family: playblack;
+            flex-wrap: wrap;
+
+            span{
+                &:first-child{
+                    font-size: 3em;
+                    display: block;
+                    line-height: 1em;
+                }
+
+                &:last-child{
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1220px){
+        .backbanner{
+            height: 40em;
+        }
+    }
+
+    @media screen and (max-width:1050px){
+        .backbanner{
+            height: 35em;
+        }
+        .content{
+            top: 30%;
+        }
+    }
+
+    @media screen and (max-width:1024px) {
+        .content{
+            top: 15%;
+        }
+    }
+
+    @media screen and (max-width:950px){
+        .backbanner{
+            height: 30em;
+        }
+        .content{
+            top: 30%;
+            .title{
+                span{
+                    &:first-child{
+                        font-size: 2.5em;
+                    }
+    
+                    &:last-child{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:800px){
+        .backbanner{
+            height: 25em;
+
+            .morebox{
+                .more{
+                    label{
+                        width: 1em;
+                        height: .8em;
+                    }
+                }
+            }
+        }
+        .content{
+            top: 28%;
+            .title{
+                span{
+                    &:first-child{
+                        font-size: 1.5em;
+                    }
+    
+                    &:last-child{
+                        font-size: 1em;
+                    }
+                }
+            }
+            .info{
+                font-size: .8em;
+            }
+        }
+    }
+
+    @media screen and (max-width:780px){
+        .content{
+            top: 18%;
+        }
+    }
+
+    @media screen and (max-width:680px) {
+        .backbanner{
+            height: 23em;
+        }
+        .content{
+            top: 20%;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .backbanner{
+            height: 19em;
+        }
+
+        .content{
+            width: 60%;
+            left: 20%;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .backbanner{
+            height: 18em;
+        }
+
+        .content{
+            width: 60%;
+            top: 15%;
+            left: 20%;
+
+            .info{
+                font-size: .1em;
+            }
+        }
+    }
+
+    // iphone6/7/8 plus X
+    @media screen and (max-width:450px){
+        .backbanner{
+            height: 15em;
+        }
+        .content{
+            top:11%;
+            .title{
+                span{
+                    &:first-child{
+                        font-size: 1em;
+                    }
+    
+                    &:last-child{
+                        font-size: .8em;
+                    }
+                }
+            }
+            .info{
+                width: 200em;
+                height: 50em;
+                font: .1em;
+                overflow-y: scroll;
+                 /*修改滚动条样式*/
+                 &::-webkit-scrollbar {
+                    width: 20px;
+                    height: 8px;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 12px;
+                    border: 8px solid rgba(0, 0, 0, 0);
+                    box-shadow: 8px 0 0 #A5ADB7 inset;
+                    box-shadow: 8px 0 0 rgba(54, 34, 235, 0.5) inset;
+                }
+                
+                &::-webkit-scrollbar-thumb:hover {
+                    box-shadow: 8px 0 0 rgb(184, 39, 39) inset;
+                }
+            }
+        }
+    }
+
+    //iphone6/7/8
+    @media screen and (max-width:380px){
+        .backbanner{
+            height: 13em;
+
+            .morebox{
+                .more{
+                    label{
+                        width: .8em;
+                        height: .5em;
+                    }
+                }
+            }
+        }
+        .content{
+            .title{
+                span{
+                    &:first-child{
+                        font-size: .5em;
+                    }
+    
+                    &:last-child{
+                        font-size: .2em;
+                    }
+                }
+            }
+            .info{
+                width: 180em;
+                height: 50em;
+                font: .1em;
+                overflow-y: scroll;
+                 /*修改滚动条样式*/
+                 &::-webkit-scrollbar {
+                    width: 20px;
+                    height: 8px;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 12px;
+                    border: 8px solid rgba(0, 0, 0, 0);
+                    box-shadow: 8px 0 0 #A5ADB7 inset;
+                    box-shadow: 8px 0 0 rgba(54, 34, 235, 0.5) inset;
+                }
+                
+                &::-webkit-scrollbar-thumb:hover {
+                    box-shadow: 8px 0 0 rgb(184, 39, 39) inset;
+                }
+            }
+        }
+    }
+
+    //iphone5/SE
+    @media screen and (max-width:350px){
+        .backbanner{
+            height: 12em;
+        }
+        .content{
+            .info{
+                width: 145em;
+            }
+        }
+    }
+    
+}
+
+/* about */ 
+.about{
+    background-color: #f5f5f5;
+    padding: 6em 0em 0em ;
+    position: relative;
+
+    .about_back{
+        width: 100%;
+    }
+
+    .subject{
+        width: 32%;
+        position: absolute;
+        top: 30%;
+        left: 20%;
+
+        .title{
+            font-family: playblack;
+            font-size: 3em;
+            margin-bottom: .5em;
+        }
+        .info{
+            font-family: MiItali;
+        }
+    }
+
+    @media screen and (max-width:1000px) {
+        .subject{
+            .title{
+                font-size: 2em;
+            }
+            .info{
+                font-family: MiItali;
+                font-size: .9em;
+            }
+        }
+    }
+
+    @media screen and (max-width:860px){
+        .subject{
+            top: 26%;
+
+            .title{
+                font-size: 2em;
+            }
+            .info{
+                font-family: MiItali;
+                width: 30em;
+                height: 15em;
+                font-size: .5em;
+                overflow-y: scroll;
+
+                /*修改滚动条样式*/
+                &::-webkit-scrollbar {
+                width: 20px;
+                height: 8px;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 12px;
+                    border: 8px solid rgba(0, 0, 0, 0);
+                    box-shadow: 8px 0 0 #A5ADB7 inset;
+                    box-shadow: 8px 0 0 rgba(253, 252, 255, 0.5) inset;
+                }
+                
+                &::-webkit-scrollbar-thumb:hover {
+                    box-shadow: 8px 0 0 #0066cc inset;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:650px) {
+        .subject{
+            top: 20%;
+
+            .title{
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    @media screen and (max-width:650px) {
+        padding: 3em 0em 0em;
+    }
+
+    @media screen and (max-width:590px) {
+        &{
+            .subject{
+                top:30%;
+            }
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .subject{
+            top:23%;
+        }
+    }
+
+    /* iphone5/SE */
+    @media screen and (max-width:470px) {
+            padding: 2em 0em 0em;
+            .subject{
+                top: 20%;
+                .title{
+                    font-size: 1em;
+                    margin-bottom: 0em;
+                }
+                .info{
+                    font-size: 0.4em;
+                }
+            }
+    }
+}
+
+/* products */
+.products{
+    background-color: #f5f5f5;
+    padding-bottom: 2em;
+
+    .subject{
+        margin: 0 auto;
+        .title{
+            font-family: playblack;
+            font-size: 3em;
+            line-height: 5em;
+            text-align: center;
+        }
+    }
+
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        
+        .list{
+            width: 30%;
+            margin-bottom: 3em;
+            cursor: pointer;
+        transition: all linear .3s;
+            
+            .thumb{
+                img{
+                width: 100%;
+                margin-bottom: 1em;
+                }
+            }
+            .info{
+                color: #0066cc;
+                font-size: 1.4em;
+                line-height: 1em;
+                font-family: Lato;
+                text-align: center;
+                margin-bottom: 1em;
+            }
+
+            &:hover{
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px #0066cc;
+                transform: translateY(2px);
+                .thumb{
+                    img{
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom{
+        text-align: center;
+        .more{
+            font-family: SSPL2;
+            padding: 1.1em 6em;
+            text-align: center;
+            font-size: 1.5em;
+        }
+    }
+
+    @media screen and (max-width:1000px){
+        .item{
+            .list{
+                .info{
+                    font-size: 1em;
+                }
+            }
+        }
+        .bottom{
+            .more{
+                padding: .6em 3em;
+            }
+        }
+    }
+
+    @media screen and (max-width:850px) {
+        .bottom{
+            .more{
+                padding: .6em 3em;
+            }
+        }
+    }
+    
+    @media screen and (max-width:700px) {
+        .item{
+            .list{
+                .info{
+                    font-size: .8em;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .subject{
+            .title{
+                font-size: 1.4em;
+            }
+        }
+
+        .item{
+            justify-content: space-around;
+
+            .list{
+                width: 80%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+
+                .thumb{
+                    width: 50%;
+
+                    img{
+                        width: 100%;
+                        margin-bottom: 0em;
+                    }
+                }
+                
+                .info{
+                    width: 50%;
+                    text-align: center;
+                    font-size: 1.2em;
+                }
+            }
+        } 
+    }
+}
+
+/* buy now */
+.buy_now{
+    background-color: #f5f5f5;
+    padding: 2em 0;
+    position: relative;
+
+    .title{
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        color: #fff;
+        
+        p,span{
+            font-family: playblack;
+        }
+
+        p{
+            font-size: 1.7em;
+        }
+
+        span{
+            font-size: 1em;
+        }
+        
+        img{
+            width: 4%;
+        }
+    }
+    
+    @media screen and (max-width:1000px) {
+        .title{
+            top: 38%
+        }
+    }
+
+    @media screen and (max-width:850px) {
+        .title{
+            p{
+                font-size: 1.4em;
+            }
+
+            span{
+                font-size: 0.7em;
+            }
+        }
+    }
+
+    @media screen and (max-width:770px){
+        .title{
+            top: 40%
+        }
+    }
+
+    @media screen and (max-width:600px){
+        .title{
+            top: 35%;
+            left: 27%
+        }
+    }  
+
+    /* iphone5/SE */
+    @media screen and (max-width:380px) {
+        .title{
+            top: 15%;
+            left: 26%;
+            p{
+                font-size: 1em;
+            }
+
+            span{
+                font-size: .4em;
+            }
+
+            img{
+                width: 6%;
+            }
+        }
+    }
+    
+    /* iphone6/7/8 Plus */
+    @media screen and (max-width:414px) {
+        .title{
+            top: 30%;
+            left: 20%;
+        }
+    }
+}
+
+/* brand */
+.brand{
+    background-color: #f5f5f5;
+    padding-bottom: 2em;
+
+    .list{
+        display: flex;
+        justify-content: space-between;
+
+        .item{
+            width: 12%;
+            cursor: pointer;
+            transition: all linear .3s;
+
+            &:hover{
+                box-shadow: 0px 0px 10px #0066cc;
+                transform: translateY(-2px);
+                border-radius: 5px;
+            }
+        }
+     }
+
+    @media screen and (max-width:700px) {
+        &{
+            .list{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                .item{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    text-align: center;
+
+                    .thumb{
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* contact */
+.contact{
+    .container{
+        height: 8em;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .left{
+            width: 50%;
+            font-family: Midi;
+            font-size: 1.4em;
+            
+            span{
+                color: red;
+            }
+        }
+
+        .right{
+            width: 50%;
+            .input-group{
+                display: flex;
+                
+                button{
+                    background-color: #0066cc;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1000px) {
+        .container{
+            .left{
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    @media screen and (max-width:750px) {
+        .container{
+            .left{
+                font-size: .9em;
+            }
+        }
+    }
+
+    @media screen and (max-width:650px) {
+        .container{
+            flex-wrap: wrap;
+            .left{
+                font-size: 1.2em;
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width:450px) {
+        .container{
+            height: 6em;
+            .left{
+                font-size: .9em;
+            }
+        }
+    }
+}
